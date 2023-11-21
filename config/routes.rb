@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'rooms/index'
+  resources :rooms, only: [:index, :show]
   get 'rooms/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  
+  root "rooms#index"
 end
